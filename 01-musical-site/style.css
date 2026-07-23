@@ -1,0 +1,198 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+
+}
+
+body{
+    background-color: rgb(255, 253, 253);
+    color:rgba(0, 0, 0, 0.925);
+    font-family: "Poppins";
+}
+
+button{
+   font-family: "Poppins";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 40px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   opacity: .8;
+   transition: all 0.3s ease; /*transição suave ao passar o mouse*/
+  
+}
+
+ button:hover{/*Interação com o botão*/
+    opacity: 5;
+   }
+
+p{
+    opacity: 0.8;
+}
+
+header{
+   
+    width: 100%;
+    height: 55px;
+    display: flex;
+    padding: 40px 4%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99; /*Sequencia de camadas*/
+    position: fixed; /*conteudo fica fixo na tela*/
+
+    background-color: white;
+    
+
+    nav ul{
+        display: flex;
+        gap: 30px; /*espaçamento entre os nomes*/
+        list-style-type: none; /*retira os marcadores da lista*/
+        background-color: rgba(240, 38, 179, 0.185);
+        padding: 16px 20px; /*espacamento interno da superior e laterais*/
+        border-radius: 12px;    /*arredondamento dos cantos*/
+        backdrop-filter: blur(20px);    /*desfoque do fundo*/
+    }
+}
+
+.logotipo{
+    width: 40px;
+}
+
+section{
+    width: 100%; /*conteudo ocupa toda a tela*/
+    display: flex; /*uma coisa do lado da outra*/
+    flex-direction: column; /*conteudo fica em coluna,uma coisa debaixo da outra*/
+}
+.section1{
+   background-image: url("assets/duque\ black.png");
+   background-size: cover; /*imagem ocupa toda a tela*/
+   background-position: center; /*imagem fica centralizada*/
+   height: 100vh; /*altura da tela*/
+   justify-content: center; /*conteudo fica centralizado na tela*/
+   align-items: center; /*conteudo fica centralizado na tela*/  
+   padding: 4%; /*espaçamento interno da esquerda e direita*/
+   padding-top: 100px;
+   
+   h2{
+        font-size: 13vw; /*tamanho da fonte em relação a tela*/
+        color: rgb(175, 6, 175);
+        text-shadow: 2px 2px 5px rgb(206, 22, 181); /*sombra da fonte*/
+        mix-blend-mode: color-dodge; /*mescla a cor da fonte com a cor do fundo*/
+
+   }
+
+
+.conteudoPrincipal{
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /*espaçamento entre os elementos*/
+        align-items: center; /*alinhamento dos elementos no centro*/
+        justify-content: center; /*alinhamento dos elementos no centro*/
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color: white; /*alinhamento do texto no centro*/
+        }
+   }
+
+.divBotoes{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+        margin-top: 25px;
+
+   }
+
+    .botaoPrimario{
+            background-color: rgb(175, 6, 175);
+            color: white;
+            gap: 12px;
+            border: none;
+            padding: 6px 6px 6px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease; /*transição suave ao passar o mouse*/
+            
+            img{
+                width: 30px;
+            }
+        }
+    .botaoSecundario{
+            padding: 16px;
+            background-color: rgba(187, 187, 187, 0.726);
+            
+        }
+    }    
+
+.section2{
+        align-items: center;
+        
+        .sobre{
+            padding: 30px;
+            text-align: center;
+            
+            h2{
+                font-size: 60px;
+                font-weight: 500;
+            }
+        }
+
+    }
+    
+.tituloSecao, .tituloSecao2{
+           font-size: 40px;
+           font-weight: 500; 
+           padding: 30px;
+           
+        }
+
+.divCards{
+        display: flex;
+        flex-wrap: wrap; /*quebra de linha quando não houver espaço*/
+        justify-content: center; /*alinhamento dos elementos no centro*/
+        margin:40px 0 120px;
+        gap: 24px;
+    }
+
+.card, .cardBranco{
+        width: 30%;
+        padding: 32px;
+        border-radius: 20px;
+
+        h3{
+            font-size: 24px;
+            font-weight: 500;
+            margin: 20px 0px 4px; 
+        }
+    }
+.cardBranco{
+     background-color: rgba(187, 187, 187, 0.726);
+     /*arredondamento dos cantos*/
+
+    }   
+.divImagens{
+        
+        display: grid;
+        grid-template-columns: repeat(3, 260px);
+        gap: 150px;
+        margin: 52px auto 120px;
+        justify-content: center;
+       
+        img{
+            width: 260px;
+            height: 360px;
+            filter:saturate(0);
+            transition: all 0.3s ease;  /*transição suave ao passar o mouse*/
+            border-radius: 15px;
+
+            &:hover{
+                filter:saturate(1);
+                transition: all 0.3s ease; /*transição suave ao passar o mouse*/        
+            }
+         }
+}
